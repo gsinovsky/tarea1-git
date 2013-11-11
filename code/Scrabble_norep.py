@@ -10,7 +10,6 @@ import string
 alphabet = string.ascii_uppercase
 
 #Asks whether it should download or not the list of words
-
 b = False
 while b is False:
     option = raw_input('Do you have the sowpods.txt file locally? (y/n) ')
@@ -32,5 +31,6 @@ with open('sowpods.txt', 'r') as the_file:
                     #if the letter is repeated, remove from our alphabet
                     alphabet = alphabet.replace(word[i], "")
 print 'The letters are ' + alphabet
+
 the_file.close()
 #End of program
