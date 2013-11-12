@@ -10,16 +10,15 @@ import string
 alphabet = string.ascii_uppercase
 
 #Asks whether it should download or not the list of words
-b = False
-while b is False:
+while True:
     option = raw_input('Do you have the sowpods.txt file locally? (y/n) ')
     if option == 'y':
-        b = True
+        break
     elif option == 'n':
         print 'Downloading file...'
         urllib.urlretrieve('http://norvig.com/ngrams/sowpods.txt', 'sowpods.txt')
         print 'File downloaded'
-        b = True
+        break
     else:
         print 'Not a valid answer'
 
@@ -31,6 +30,4 @@ with open('sowpods.txt', 'r') as the_file:
                     #if the letter is repeated, remove from our alphabet
                     alphabet = alphabet.replace(word[i], "")
 print 'The letters are ' + alphabet
-
-the_file.close()
 #End of program
