@@ -2,6 +2,7 @@
 #Given the official list of scrabble words returns the letters which aren't
 #repeated in any word.
 #Author: Gustavo Sinovsky
+#Compiled in Python 2.7.5
 
 import urllib
 import string
